@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/background_gradient"
+        tools:layout_editor_absoluteX="1dp">
+
+
+        <!-- Time Display -->
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="244dp"
+            android:layout_height="94dp"
+            android:gravity="center"
+            android:text="@string/default_time"
+            android:textSize="40sp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="340dp"
+            android:layout_height="540dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTimer">
+
+            <!-- Start Button -->
+            <ImageButton
+                android:id="@+id/btnStart"
+                android:layout_width="124dp"
+                android:layout_height="141dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/start_btn"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_start_btn" />
+
+            <!-- Hold Button -->
+            <ImageButton
+                android:id="@+id/btnHold"
+                android:layout_width="128dp"
+                android:layout_height="167dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/hold_btn"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_pause_play" />
+
+            <!-- Stop Button -->
+            <ImageButton
+                android:id="@+id/btnStop"
+                android:layout_width="126dp"
+                android:layout_height="168dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/stop_btn"
+                app:srcCompat="@drawable/ic_stop_btn" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
